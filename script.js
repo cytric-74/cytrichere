@@ -287,15 +287,15 @@ Type './link' to open the project repository.
                     addToOutput(`<div class="response">Opening email client...</div>`);
                     break;
                 case 'instagram':
-                    window.open('https://instagram.com/yourprofile', '_blank');
+                    window.open('https://instagram.com/roh28j', '_blank');
                     addToOutput(`<div class="response">Opening Instagram profile...</div>`);
                     break;
                 case 'twitter':
-                    window.open('https://twitter.com/yourprofile', '_blank');
+                    window.open('https://twitter.com/ROHAN1860', '_blank');
                     addToOutput(`<div class="response">Opening Twitter profile...</div>`);
                     break;
                 case 'discord':
-                    addToOutput(`<div class="response">Discord: yourusername#1234</div>`);
+                    addToOutput(`<div class="response">Discord: cytrc</div>`);
                     break;
                 case '..':
                     currentDir = '~';
