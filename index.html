@@ -3,201 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rohan - Data analyst Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>Rohan Sharma - Terminal Portfolio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap">
+    <style>
+        /* CSS will be added here */
+    </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Rohan</div>
-                <div class="nav-links">
-                    <div class="nav-link" data-section="about">
-                        About Me
-                        <div class="nav-indicator" style="transform: translateX(0);"></div>
-                    </div>
-                    <div class="nav-link" data-section="work">
-                        Work
-                    </div>
-                    <div class="nav-link" data-section="resume">
-                        Resume
-                    </div>
-                </div>
-            </nav>
+    <div id="terminal">
+        <div id="header">
+            <pre id="ascii-art"></pre>
         </div>
-    </header>
-    
-    <main class="main">
-        <div class="container">
-            <!-- About Me Section -->
-            <section id="about" class="section active">
-                <div class="about-section">
-                    <div class="about-content">
-                        <h1 class="about-title">My name is Rohan</h1>
-                        <p class="about-text">
-                            I'm a passionate Data analyst based in India.
-                        </p>
-                        <p class="about-text">
-                            As a hardworking artist, I'm constantly expanding my skill set and exploring diverse design styles to ensure I deliver exceptional results in every project. My approach combines technical precision with artistic flair, allowing me to create designs that are both aesthetically pleasing and highly effective.
-                        </p>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <i class="fas fa-map-marker-alt"></i> Darjeeling, India
-                            </div>
-                            <div class="contact-item">
-                                <i class="fab fa-linkedin"></i> linkedin.com/in/roh28j
-                            </div>
-                        </div>
-                    </div>
-                    <div class="about-image">
-                        <!-- Image will be added here -->
-                        <div style="width: 400px; height: 500px; background-color: #f0f0f0; border-radius: 10px;"></div>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Work Section -->
-            <section id="work" class="section">
-                <div class="work-section">
-                    <h2 class="category-title">My Work</h2>
-                    <div class="work-categories">
-                        <div class="category-item">
-                            <h3>Branding & Logo</h3>
-                        </div>
-                        <div class="category-item">
-                            <h3>Social Media & Poster</h3>
-                        </div>
-                        <div class="category-item">
-                            <h3>Packaging & Illustration</h3>
-                        </div>
-                        <div class="category-item">
-                            <h3>3D & Motion Graphic</h3>
-                        </div>
-                    </div>
-                    
-                    <div style="text-align: center; margin-top: 40px;">
-                        <button style="background-color: var(--primary-color); color: white; border: none; padding: 12px 30px; border-radius: 30px; font-size: 16px; cursor: pointer; transition: transform 0.3s;">
-                            See More
-                        </button>
-                    </div>
-                </div>
-            </section>
-            
-            <!-- Resume Section -->
-            <section id="resume" class="section">
-                <div class="resume-section">
-                    <h2 class="category-title">My Expertise</h2>
-                    <div class="resume-container">
-                        <div class="resume-column">
-                            <div class="resume-block">
-                                <div class="resume-header">
-                                    <h3 class="resume-title">Experience</h3>
-                                </div>
-                                <div class="resume-content">
-                                    <div class="experience-item">
-                                        <div class="experience-period">2022-Present</div>
-                                        <div class="experience-role">Freelance Graphic Designer</div>
-                                        <div class="experience-company">Logo, Brand Identity, Social Media, etc</div>
-                                    </div>
-                                    <div class="experience-item">
-                                        <div class="experience-period">2022-Present</div>
-                                        <div class="experience-role">Etsy Seller</div>
-                                        <div class="experience-company">Watercolor Illustrations & Merch Design Templates</div>
-                                    </div>
-                                    <div class="experience-item">
-                                        <div class="experience-period">2021-2022</div>
-                                        <div class="experience-role">Junior Staff Of Industrial Engineering Team</div>
-                                        <div class="experience-company">PT Kanaan Global Indonesia</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="resume-block">
-                                <div class="resume-header">
-                                    <h3 class="resume-title">Expertise</h3>
-                                    <button class="expand-btn">↓</button>
-                                </div>
-                                <div class="resume-content">
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Logo Design</span>
-                                        <span class="skill-tag">Brand Identity</span>
-                                        <span class="skill-tag">Packaging</span>
-                                        <span class="skill-tag">Poster & Editorial</span>
-                                        <span class="skill-tag">Social Media</span>
-                                        <span class="skill-tag">3D Design</span>
-                                        <span class="skill-tag">Motion Graphics</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="resume-column">
-                            <div class="resume-block">
-                                <div class="resume-header">
-                                    <h3 class="resume-title">Hardskill</h3>
-                                    <button class="expand-btn">↓</button>
-                                </div>
-                                <div class="resume-content">
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Photoshop</span>
-                                        <span class="skill-tag">Illustrator</span>
-                                        <span class="skill-tag">InDesign</span>
-                                        <span class="skill-tag">After Effects</span>
-                                        <span class="skill-tag">3D Modeling</span>
-                                        <span class="skill-tag">UI/UX Design</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="resume-block">
-                                <div class="resume-header">
-                                    <h3 class="resume-title">Softskill</h3>
-                                    <button class="expand-btn">↓</button>
-                                </div>
-                                <div class="resume-content">
-                                    <div class="skills-list">
-                                        <span class="skill-tag">Creativity</span>
-                                        <span class="skill-tag">Teamwork</span>
-                                        <span class="skill-tag">Time Management</span>
-                                        <span class="skill-tag">Flexibility</span>
-                                        <span class="skill-tag">Communication</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="resume-block">
-                                <div class="resume-header">
-                                    <h3 class="resume-title">Projects</h3>
-                                </div>
-                                <div class="projects-grid">
-                                    <div class="project-card" onclick="window.open('https://github.com', '_blank')">
-                                        <h4>UI/UX Bootcamp Project</h4>
-                                    </div>
-                                    <div class="project-card" onclick="window.open('https://github.com', '_blank')">
-                                        <h4>Watercolor Collection</h4>
-                                    </div>
-                                    <div class="project-card" onclick="window.open('https://github.com', '_blank')">
-                                        <h4>Brand Identity Package</h4>
-                                    </div>
-                                    <div class="project-card" onclick="window.open('https://github.com', '_blank')">
-                                        <h4>3D Animation Series</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <div id="output"></div>
+        <div id="input-line" class="input-line">
+            <span id="prompt">guest@portfolio:~$</span>
+            <input type="text" id="command-input" autofocus spellcheck="false">
         </div>
-    </main>
-    
-    <footer>
-        <div class="container">
-            <p class="footer-text">© 2023 Qorry. All rights reserved.</p>
-        </div>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+        // JavaScript will be added here
+    </script>
 </body>
 </html>
