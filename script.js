@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function executeCommand(command) {
         // Display the command with timestamp
         const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-        addToOutput(`<div class="command">[${time}] ${currentDir} $ ${command}</div>`);
+        addToOutput(`<div class="command">[${time}] guest@terminal-roh:${currentDir} $ ${command}</div>`);
         
         // Parse command
         const parts = command.split(' ');
