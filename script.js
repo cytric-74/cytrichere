@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Starting services...",
             "Ready!",
             "",
-            "Welcome to Rohan Sharma's Terminal Portfolio",
+            "Welcome to rohan's Terminal Portfolio",
             "Type 'help' for available commands",
             ""
         ];
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
 `;
         } else if (currentDir === '~/projects') {
             contents = `
-<span class="dir">feel_cv</span>         : A browser extension that fills up your relevant information
+<span class="dir">feel_cv</span>                : A browser extension that fills up your relevant information
 <span class="dir">meowtech_innovateathon</span> : Built a project with intel oneAPI
 <span class="dir">gta6_sales_prediction</span>  : Prediction for GTA6 sales
 <span class="dir">stock_market_analysis</span>  : Final year project
