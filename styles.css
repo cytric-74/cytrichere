@@ -12,7 +12,6 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    text-shadow: 0 0 8px rgba(255, 140, 0, 0.7);
 }
 
 #header {
@@ -34,7 +33,6 @@ body {
 #prompt {
     margin-right: 10px;
     color: #4e9a06;
-    text-shadow: 0 0 5px rgba(78, 154, 6, 0.7);
 }
 
 #command-input {
@@ -46,50 +44,58 @@ body {
     flex-grow: 1;
     outline: none;
     caret-color: #ff8c00;
-    text-shadow: 0 0 8px rgba(255, 140, 0, 0.7);
 }
 
 .command {
     margin-bottom: 5px;
-    text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
 }
 
 .response {
     margin-bottom: 15px;
     white-space: pre-wrap;
-    text-shadow: 0 0 5px rgba(255, 140, 0, 0.5);
 }
 
 .dir {
     color: #729fcf;
-    text-shadow: 0 0 5px rgba(114, 159, 207, 0.7);
 }
 
 .file {
     color: #eeeeec;
-    text-shadow: 0 0 5px rgba(238, 238, 236, 0.7);
 }
 
 .error {
     color: #cc0000;
-    text-shadow: 0 0 5px rgba(204, 0, 0, 0.7);
 }
 
 .success {
     color: #4e9a06;
-    text-shadow: 0 0 5px rgba(78, 154, 6, 0.7);
 }
 
 .ascii-art {
     color: #ff8c00;
     line-height: 1.2;
     margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
 }
 
 .project-link {
     color: #ad7fa8;
     text-decoration: underline;
     cursor: pointer;
-    text-shadow: 0 0 5px rgba(173, 127, 168, 0.7);
 }
+
+/* Animation container */
+#animation-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* Removed the glowing terminal border */

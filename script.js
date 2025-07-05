@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Command history
     let commandHistory = [];
     let historyIndex = -1;
+    let animationInterval = null;
     
     // Current directory
     let currentDir = '~';
@@ -19,6 +20,11 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle command input
     commandInput.addEventListener('keydown', function(e) {
+        // Clear any ongoing animation when typing
+        if (e.key !== 'Enter' && e.key !== 'ArrowUp' && e.key !== 'ArrowDown') {
+            clearAnimation();
+        }
+        
         if (e.key === 'Enter') {
             const command = commandInput.value.trim();
             if (command) {
@@ -30,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (e.key === 'ArrowUp') {
             if (commandHistory.length > 0 && historyIndex > 0) {
                 historyIndex--;
+                commandInput.value = commandHistory[historyIndex];
+            } else if (historyIndex === -1 && commandHistory.length > 0) {
+                historyIndex = commandHistory.length - 1;
                 commandInput.value = commandHistory[historyIndex];
             }
         } else if (e.key === 'ArrowDown') {
@@ -46,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function executeCommand(command) {
         // Display the command with timestamp
         const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-        addToOutput(`<div class="command">[${time}] guest@terminal-roh ${currentDir} $ ${command}</div>`);
+        addToOutput(`<div class="command">[${time}] guest@terminal-roh:${currentDir} $ ${command}</div>`);
         
         // Parse command
         const parts = command.split(' ');
@@ -62,8 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 handleCd(args);
                 break;
             case 'clear':
-            case 'cls':  // Added cls command as alias for clear
-                clearTerminal();
+            case 'cls':
+                showClearAnimation();
                 break;
             case 'help':
                 showHelp();
@@ -88,17 +97,70 @@ document.addEventListener('DOMContentLoaded', function() {
         output.innerHTML = '';
     }
     
-    function showHelp() {
-        const helpText = `
-Available commands:
-- ls               : List directory contents
-- cd <directory>   : Change directory
-- clear/cls        : Clear the terminal
-- help             : Show this help message
-- cat <file>       : View file contents
-- ./link           : Open project link (when in project directory)
-`;
-        addToOutput(`<div class="response">${helpText}</div>`);
+    function showClearAnimation() {
+        clearTerminal();
+        
+        // ASCII art frames for animation
+        const frames = [
+            `   _____\n  /     \\\n  \\     /\n   -----`,
+            `   _____\n  /     \\\n  \\  .  /\n   -----`,
+            `   _____\n  /  .  \\\n  \\     /\n   -----`,
+            `   _____\n  /     \\\n  \\  '  /\n   -----`
+        ];
+        
+        let frameIndex = 0;
+        addToOutput(`<div class="ascii-art">${frames[frameIndex]}</div>`);
+        
+        animationInterval = setInterval(() => {
+            frameIndex = (frameIndex + 1) % frames.length;
+            output.lastChild.innerHTML = frames[frameIndex];
+        }, 300);
+    }
+    
+    function clearAnimation() {
+        if (animationInterval) {
+            clearInterval(animationInterval);
+            animationInterval = null;
+        }
+    }
+    
+    function showBootAnimation() {
+        const bootSequence = [
+            "Booting Rohan's Portfolio...",
+            "Loading modules.......",
+            "Initializing terminal interface...",
+            "Mounting file systems...",
+            "Starting services...",
+            "Ready!",
+            "",
+            "Welcome to Rohan Sharma's Terminal Portfolio",
+            "Type 'help' for available commands",
+            ""
+        ];
+        
+        let i = 0;
+        const interval = setInterval(() => {
+            if (i < bootSequence.length) {
+                addToOutput(`<div class="response">${bootSequence[i]}</div>`);
+                i++;
+            } else {
+                clearInterval(interval);
+                showAsciiArt(`
+  _____          _      _   _             _____      _   _   _             
+ |  __ \\        | |    | | | |           |  __ \\    | | | | (_)            
+ | |__) |___  __| | ___| |_| |_ ___ _ __ | |__) |_ _| |_| |_ _ _ __   __ _ 
+ |  _  // _ \\/ _\` |/ _ \\ __| __/ _ \\ '_ \\|  ___/ _\` | __| __| | '_ \\ / _\` |
+ | | \\ \\  __/ (_| |  __/ |_| ||  __/ | | | |  | (_| | |_| |_| | | | | (_| |
+ |_|  \\_\\___|\\__,_|\\___|\\__|\\__\\___|_| |_|_|   \\__,_|\\__|\\__|_|_| |_|\\__, |
+                                                                        __/ |
+                                                                       |___/ 
+                `);
+            }
+        }, 300);
+    }
+    
+    function showAsciiArt(art) {
+        addToOutput(`<div class="ascii-art">${art}</div>`);
     }
     
     function handleLs() {
@@ -372,42 +434,38 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
         }
     }
     
-    function showAsciiArt(art) {
-        addToOutput(`<div class="ascii-art">${art}</div>`);
+    function handleCat(args) {
+        if (!args.length) {
+            addToOutput(`<div class="error">Usage: cat [filename]</div>`);
+            return;
+        }
+        
+        const file = args[0];
+        switch(file) {
+            case 'about.txt':
+                showAboutMe();
+                break;
+            case 'skills.txt':
+                showSkills();
+                break;
+            case 'experience.txt':
+                showWorkExp();
+                break;
+            default:
+                addToOutput(`<div class="error">cat: ${file}: No such file found</div>`);
+        }
     }
     
-    function showBootAnimation() {
-        const bootSequence = [
-            "Booting Rohan's Portfolio...",
-            "Loading modules.......",
-            "Initializing terminal interface...",
-            "Mounting file systems...",
-            "Starting services...",
-            "Ready!",
-            "",
-            "Welcome to Rohan Sharma's Terminal Portfolio",
-            "Type 'help' for available commands",
-            ""
-        ];
-        
-        let i = 0;
-        const interval = setInterval(() => {
-            if (i < bootSequence.length) {
-                addToOutput(`<div class="response">${bootSequence[i]}</div>`);
-                i++;
-            } else {
-                clearInterval(interval);
-                showAsciiArt(`
-  _____          _      _   _             _____      _   _   _             
- |  __ \\        | |    | | | |           |  __ \\    | | | | (_)            
- | |__) |___  __| | ___| |_| |_ ___ _ __ | |__) |_ _| |_| |_ _ _ __   __ _ 
- |  _  // _ \\/ _\` |/ _ \\ __| __/ _ \\ '_ \\|  ___/ _\` | __| __| | '_ \\ / _\` |
- | | \\ \\  __/ (_| |  __/ |_| ||  __/ | | | |  | (_| | |_| |_| | | | | (_| |
- |_|  \\_\\___|\\__,_|\\___|\\__|\\__\\___|_| |_|_|   \\__,_|\\__|\\__|_|_| |_|\\__, |
-                                                                        __/ |
-                                                                       |___/ 
-                `);
-            }
-        }, 300);
+    function showHelp() {
+        const helpText = `
+Available commands:
+- ls               : List directory contents
+- cd <directory>   : Change directory
+- clear/cls        : Clear the terminal (with animation)
+- help             : Show this help message
+- cat <file>       : View file contents
+- ./link           : Open project link (when in project directory)
+`;
+        addToOutput(`<div class="response">${helpText}</div>`);
     }
 });
