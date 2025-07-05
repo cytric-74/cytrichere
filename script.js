@@ -28,13 +28,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 commandInput.value = '';
             }
         } else if (e.key === 'ArrowUp') {
-            // Navigate command history up
             if (commandHistory.length > 0 && historyIndex > 0) {
                 historyIndex--;
                 commandInput.value = commandHistory[historyIndex];
             }
         } else if (e.key === 'ArrowDown') {
-            // Navigate command history down
             if (commandHistory.length > 0 && historyIndex < commandHistory.length - 1) {
                 historyIndex++;
                 commandInput.value = commandHistory[historyIndex];
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function executeCommand(command) {
         // Display the command with timestamp
         const time = new Date().toLocaleTimeString('en-US', { hour12: false });
-        addToOutput(`<div class="command">[${time}] guest@terminal-roh:${currentDir} $ ${command}</div>`);
+        addToOutput(`<div class="command">[${time}] guest@terminal-roh ${currentDir} $ ${command}</div>`);
         
         // Parse command
         const parts = command.split(' ');
@@ -64,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 handleCd(args);
                 break;
             case 'clear':
+            case 'cls':  // Added cls command as alias for clear
                 clearTerminal();
                 break;
             case 'help':
@@ -94,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
 Available commands:
 - ls               : List directory contents
 - cd <directory>   : Change directory
-- clear            : Clear the terminal
+- clear/cls        : Clear the terminal
 - help             : Show this help message
 - cat <file>       : View file contents
 - ./link           : Open project link (when in project directory)
@@ -226,15 +225,15 @@ Type './link' to open the project repository.
                     addToOutput(`<div class="response">Opening email client...</div>`);
                     break;
                 case 'instagram':
-                    window.open('https://instagram.com/roh28j', '_blank');
+                    window.open('https://instagram.com/yourprofile', '_blank');
                     addToOutput(`<div class="response">Opening Instagram profile...</div>`);
                     break;
                 case 'twitter':
-                    window.open('https://twitter.com/ROHAN1861', '_blank');
+                    window.open('https://twitter.com/yourprofile', '_blank');
                     addToOutput(`<div class="response">Opening Twitter profile...</div>`);
                     break;
                 case 'discord':
-                    addToOutput(`<div class="response">Discord: cytrc</div>`);
+                    addToOutput(`<div class="response">Discord: yourusername#1234</div>`);
                     break;
                 case '..':
                     currentDir = '~';
@@ -250,7 +249,7 @@ Type './link' to open the project repository.
     
     function showAboutMe() {
         const aboutText = `
-<b>Rohan</b>
+<b>Rohan Sharma</b>
 Data Analyst | Computer Science Engineer
 
 <b>About Me:</b>
@@ -291,9 +290,6 @@ JavaScript  TypeScript  React  Databricks  PostgreSQL  AWS (EC2, S3)  R  Hugging
 CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
 `;
         addToOutput(`<div class="response">${skillsText}</div>`);
-        
-        // You would add icons here if you have them
-        // For example: addToOutput('<img src="python-icon.png" class="skill-icon">');
     }
     
     function showWorkExp() {
@@ -381,7 +377,6 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
     }
     
     function showBootAnimation() {
-        // This would be your cool ASCII animation
         const bootSequence = [
             "Booting Rohan's Portfolio...",
             "Loading modules.......",
