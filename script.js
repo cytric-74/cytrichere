@@ -424,10 +424,10 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
             
             // These would be your actual project links
             const links = {
-                'feel_cv': '#',
-                'meowtech_innovateathon': '#',
-                'gta6_sales_prediction': '#',
-                'stock_market_analysis': '#'
+                'feel_cv': 'https://github.com/cytric-74/feel-cv',
+                'meowtech_innovateathon': 'https://github.com/debajyotisarkarhome/MeowTech_INNOVATEathon',
+                'gta6_sales_prediction': 'https://github.com/cytric-74/gta6-sales-prediction-',
+                'stock_market_analysis': 'https://github.com/cytric-74/stock-market-analysis'
             };
             
             if (links[project]) {
