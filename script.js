@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 `;
         } else if (currentDir === '~/contact_me') {
             contents = `
-<span class="dir">github</span>    <span class="dir">linkedin</span>    <span class="dir">mail</span>
+<span class="dir">github</span>     <span class="dir">linkedin</span>    <span class="dir">mail</span>
 <span class="dir">instagram</span>  <span class="dir">twitter</span>     <span class="dir">discord</span>
 `;
         } else {
