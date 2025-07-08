@@ -310,11 +310,11 @@ Type './link' to open the project repository.
     
     function showAboutMe() {
         const aboutText = `
-<span class="bold-title">Rohan</span>
+<span class="bold-title">Hi Im Rohan</span>
 <span class="normal-text">Data Analyst | Computer Science Graduate</span>
 
-<b>About Me:</b>
-I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
+<span class="bold-titles">About Me:</span>
+<span class="normal-text">I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
 With a strong foundation in software development, data analysis, and AI, I specialize in transforming complex datasets into meaningful insights and intuitive applications.
 
 I love designing(art, and other graphical content) also Love making and giving presentations.
@@ -322,10 +322,10 @@ I love designing(art, and other graphical content) also Love making and giving p
 Over the past few years, I've worked across projects involving deep learning, computer vision, sentiment analysis, and real-time data visualization.
 I’ve also collaborated on agricultural AI tools, audio emotion detection systems, and market prediction models using social media trends.
 
-I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India.
+I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India. </span>
 
-<b>Education:</b>
-- B.Tech in Computer Science and Engineering
+<span class="bold-titles">Education:</span>
+    B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
             CGPA: 9.2      YGPA : 9.0
 
