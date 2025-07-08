@@ -311,17 +311,23 @@ Type './link' to open the project repository.
     function showAboutMe() {
         const aboutText = `
 <b>Rohan</b>
-Data Analyst | Computer Science Engineer
+Data Analyst | Computer Science Graduate
 
 <b>About Me:</b>
-I'm a passionate data analyst with a strong background in computer science. 
-I enjoy solving complex problems using data-driven approaches and building 
-innovative projects that bridge technology and real-world applications.
+I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
+With a strong foundation in software development, data analysis, and AI, I specialize in transforming complex datasets into meaningful insights and intuitive applications.
+
+I love designing(art, and other graphical content) also Love making and giving presentations.
+
+Over the past few years, I've worked across projects involving deep learning, computer vision, sentiment analysis, and real-time data visualization.
+I’ve also collaborated on agricultural AI tools, audio emotion detection systems, and market prediction models using social media trends.
+
+I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India.
 
 <b>Education:</b>
 - B.Tech in Computer Science and Engineering
-  Siliguri Institute of Technology (2020-2024)
-  CGPA: 9.0
+        Siliguri Institute of Technology (2020-2024)
+  CGPA: 9.2      YGPA : 9.0
 
 <b>Research Interests:</b>
 - Computational Fluid Dynamics (CFD) and Particle-Based Simulations
@@ -332,7 +338,9 @@ innovative projects that bridge technology and real-world applications.
 - Programming side projects
 - Learning new technologies
 - Open source contributions
-- Reading tech blogs and research papers
+- Dribble some baseketball
+- Take some picture/video and edit them
+- Love watching f1/jetts (1 love engines)
 `;
         addToOutput(`<div class="response">${aboutText}</div>`);
     }
@@ -407,12 +415,12 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
     
     function showProject(projectName, description) {
         currentDir = `~/projects/${projectName}`;
-        showAsciiArt(`
-    ____             __            
-   / __ \\____ ______/ /_____  _____
-  / /_/ / __ \`/ ___/ //_/ _ \\/ ___/
- / ____/ /_/ / /__/ ,< /  __/ /    
-/_/    \\__,_/\\___/_/|_|\\___/_/     
+        showAsciiArt(`                             
+                _            _   
+ ___  ___  ___ |_| ___  ___ | |_ 
+| . ||  _|| . || || -_||  _||  _|
+|  _||_|  |___||_||___||___||_|  
+|_|          |___|              
 `);
         addToOutput(`<div class="response">${description}</div>`);
     }
