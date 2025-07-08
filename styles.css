@@ -83,6 +83,16 @@ body {
     cursor: pointer;
 }
 
+.bold-title {
+   color: #eeeeec; 
+   font-weight: bold;
+   font-size: medium;
+}
+
+.normal-text {
+    color: #ff8c00;
+}
+
 /* Animation container */
 #animation-container {
     position: fixed;
