@@ -146,12 +146,13 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 clearInterval(interval);
                 showAsciiArt(`
-                    ██████╗ ███████╗ ██████╗██████╗ ██╗   ██╗██████╗ ████████╗███████╗██████╗ 
-                    ██╔══██╗██╔════╝██╔════╝██╔══██╗╚██╗ ██╔╝██╔══██╗╚══██╔══╝██╔════╝██╔══██╗
-                    ██║  ██║█████╗  ██║     ██████╔╝ ╚████╔╝ ██████╔╝   ██║   █████╗  ██║  ██║
-                    ██║  ██║██╔══╝  ██║     ██╔══██╗  ╚██╔╝  ██╔═══╝    ██║   ██╔══╝  ██║  ██║
-                    ██████╔╝███████╗╚██████╗██║  ██║   ██║   ██║        ██║   ███████╗██████╔╝
-                    ╚═════╝ ╚══════╝ ╚═════╝╚═╝  ╚═╝   ╚═╝   ╚═╝        ╚═╝   ╚══════╝╚═════╝ 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡠⣶⢶⠒⢢⡄⢲⣶⡆⠀⢀⣲⡖⣿⣿⣷⣶⢰⣶⡆⣶⡆⣶⣶⡆⣠⣶⣶⡶⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢰⣷⡏⠀⠀⠋⠉⠀⢿⣿⠀⣾⡿⠀⢸⣿⡇⠀⠀⣿⣿⠋⠁⠀⣿⣷⢸⡟⠀⠀⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠘⣯⢷⣄⢠⣴⡦⠀⠘⣷⣻⣾⠂⠀⣿⣿⣧⣀⢸⣿⡇⠀⠀⢸⣿⡇⢿⣷⣄⣠⣶⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠁⠉⠉⠉⠀⢀⣀⣸⡿⠏⠀⠀⠀⠉⠉⠉⠀⠉⠁⠀⠀⠀⠉⠉⠁⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠘⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                                                                                             
                 `);
             }
@@ -325,57 +326,73 @@ I’ve also collaborated on agricultural AI tools, audio emotion detection syste
 I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India. </span>
 
 <span class="bold-titles">Education:</span>
-    B.Tech in Computer Science and Engineering
+    <span class="normal-text">B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
             CGPA: 9.2      YGPA : 9.0
+        </span>
 
-<b>Research Interests:</b>
+<span class="bold-titles">Research Interests:</span>
+<span class="normal-text">
 - Computational Fluid Dynamics (CFD) and Particle-Based Simulations
 - Graph-Based Verification and Model Checking
 - Machine Learning and AI applications
+</span>
 
-<b>Hobbies:</b>
+<span class="bold-titles>Hobbies:</span>
+<span class="normal-text">
 - Programming side projects
 - Learning new technologies
 - Open source contributions
 - Dribble some baseketball
 - Take some picture/video and edit them
 - Love watching f1/jetts (1 love engines)
+</span>
+
 `;
         addToOutput(`<div class="response">${aboutText}</div>`);
     }
     
     function showSkills() {
         const skillsText = `
-<b>Technical Skills:</b>
+<span class="bold-titles">Technical Skills:</span>
 
 <b>Efficient with:</b>
+<span class="normal-text">
 Python  Java  MySQL  PowerBI  Tableau  REST  Git  Seaborn  Excel/Sheets  pySpark
+</span>
 
 <b>Familiar with:</b>
+<span class="normal-text">
 JavaScript  TypeScript  React  Databricks  PostgreSQL  AWS (EC2, S3)  R  HuggingFace
+</span>
 
 <b>Currently Learning:</b>
+<span class="normal-text">
 CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
+</span>
 `;
         addToOutput(`<div class="response">${skillsText}</div>`);
     }
     
     function showWorkExp() {
         const workText = `
-<b>Professional Experience:</b>
+<span class="bold-titles">Professional Experience:</span>
 
 <b>Darwin Box</b>
+<span class"normal-text">
 - Improved efficiency by 4%
 - Automated reporting pipelines using Python, reducing manual effort
 - Implemented preventive maintenance strategies, resulting in 20% decrease in equipment downtime
 - Identified bottlenecks in workflow and suggested actionable insights
+</span>
 
 <b>Rdr.inc</b>
+<span class="normal-text">
 - Analyzed complex datasets to identify trends and mitigate risks
 - Coordinated testing and validation, ensuring compliance with industry standards
 - Developed predictive models using machine learning techniques
 - Delivered data-driven insights to support strategic decision-making
+</span>
 `;
         addToOutput(`<div class="response">${workText}</div>`);
     }
@@ -416,11 +433,25 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
     function showProject(projectName, description) {
         currentDir = `~/projects/${projectName}`;
         showAsciiArt(`                             
-                _            _   
- ___  ___  ___ |_| ___  ___ | |_ 
-| . ||  _|| . || || -_||  _||  _|
-|  _||_|  |___||_||___||___||_|  
-|_|          |___|              
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⡄⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⠋⡇⠀⠀⠀⠀⠀
+⢠⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣇⡇⠀⠀⠀⠀⠀
+⠸⡄⣿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀
+⠀⣇⣿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀⠀⠀⠀⠀⣴⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣄⣀⣀⣀⣾⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⠈⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀
+⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀
+⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⠁⠀⠈⢿⣿⣿⡇⠀⠀⠀⠀
+⠀⠀⠀⣿⣿⣿⣿⠉⠁⠀⣾⡆⢸⣿⣿⣿⣿⠀⣾⡆⠀⠈⣿⣿⡇⠀⠀⠀⠀
+⠀⠀⠀⣿⣿⣿⣿⡆⠀⠀⠈⠁⣸⣿⣿⣿⣿⡄⠙⠁⠀⣰⣿⣿⡇⠀⠀⠀⠀
+⢀⣀⣀⣸⣿⣿⣿⣿⣷⣶⣶⣿⣿⣿⣿⣾⣿⣿⣶⣶⣿⣿⣿⣿⠥⠤⠤⠤⠄
+⠀⢀⡠⠤⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠒⠤⢤⢀⠀
+⠒⠉⠀⡠⠖⠋⠙⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠯⢄⣀⠀⠀⠀⠀
+⠀⠐⠉⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠉⠒⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀
 `);
         addToOutput(`<div class="response">${description}</div>`);
     }
