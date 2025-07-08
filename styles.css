@@ -84,13 +84,13 @@ body {
 }
 
 .bold-title {
-   color: #eeeeec; 
+   color: #ff8c00; 
    font-weight: bold;
    font-size: medium;
 }
 
 .normal-text {
-    color: #ff8c00;
+    color: #fff4d5;
 }
 
 /* Animation container */

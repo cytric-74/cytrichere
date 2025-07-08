@@ -310,8 +310,8 @@ Type './link' to open the project repository.
     
     function showAboutMe() {
         const aboutText = `
-<b>Rohan</b>
-Data Analyst | Computer Science Graduate
+<span class="bold-title">Rohan</span>
+<span class="normal-text">Data Analyst | Computer Science Graduate</span>
 
 <b>About Me:</b>
 I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
