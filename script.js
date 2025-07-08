@@ -327,7 +327,7 @@ I enjoy exploring intersections between technology, culture, and society—parti
 <b>Education:</b>
 - B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
-  CGPA: 9.2      YGPA : 9.0
+            CGPA: 9.2      YGPA : 9.0
 
 <b>Research Interests:</b>
 - Computational Fluid Dynamics (CFD) and Particle-Based Simulations
