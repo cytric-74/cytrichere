@@ -1,5 +1,5 @@
 body {
-    background-color: #0a0a0a;
+    background-color: #252525;
     color: #ff8c00;
     font-family: 'Ubuntu Mono', monospace;
     margin: 0;
@@ -32,7 +32,7 @@ body {
 
 #prompt {
     margin-right: 10px;
-    color: #4e9a06;
+    color: #ceeeb1;
 }
 
 #command-input {
@@ -97,5 +97,3 @@ body {
     z-index: 100;
     pointer-events: none;
 }
-
-/* Removed the glowing terminal border */
