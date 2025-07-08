@@ -451,7 +451,6 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
 ⠀⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀
 `);
         addToOutput(`<div class="response">${description}</div>`);
     }
@@ -460,7 +459,6 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
         if (currentDir.startsWith('~/projects/')) {
             const project = currentDir.split('/')[2];
             
-            // These would be your actual project links
             const links = {
                 'feel_cv': 'https://github.com/cytric-74/feel-cv',
                 'meowtech_innovateathon': 'https://github.com/debajyotisarkarhome/MeowTech_INNOVATEathon',
