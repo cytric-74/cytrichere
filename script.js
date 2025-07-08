@@ -232,8 +232,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'feel_cv':
                     showProject('feel_cv', `
 <b>feel_cv</b>
-A browser extension that fills up your relevant information but extracting that information 
-from the uploaded cv(.docx, .txt, .pdf) with the help of openAI.
+A browser extension that fills up your relevant information but extracting relevant information 
+from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI.
 
 Type './link' to open the project repository.
 `);
@@ -241,8 +241,8 @@ Type './link' to open the project repository.
                 case 'meowtech_innovateathon':
                     showProject('meowtech_innovateathon', `
 <b>MeowTech INNOVATEathon</b>
-Built a project with intel oneAPI, that analyzes the audio real time predicting the emotion 
-of the audio and suggest you books on the basis of your mood.
+Built a project during Intel INNOVATEthon challenged with using intel oneAPI, that analyzes the audio real time predicting the emotion 
+of the audio while suggest you books/songs on the basis of your mood inorder to revamp your positive mood or to elevate your negatives.
 
 Type './link' to open the project repository.
 `);
