@@ -291,7 +291,7 @@ Type './link' to open the project repository.
                     addToOutput(`<div class="response">Opening Instagram profile...</div>`);
                     break;
                 case 'twitter':
-                    window.open('https://twitter.com/ROHAN1860', '_blank');
+                    window.open('https://twitter.com/roh28j', '_blank');
                     addToOutput(`<div class="response">Opening Twitter profile...</div>`);
                     break;
                 case 'discord':
