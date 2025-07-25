@@ -124,6 +124,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    let asciiShown = false; // Add this globally
+
     function showBootAnimation() {
         const bootSequence = [
             "Booting Rohan's Portfolio...",
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
             "Type 'help' for available commands",
             ""
         ];
-        
+    
         let i = 0;
         const interval = setInterval(() => {
             if (i < bootSequence.length) {
@@ -145,16 +147,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 i++;
             } else {
                 clearInterval(interval);
-                showAsciiArt(`
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⡠⣶⢶⠒⢢⡄⢲⣶⡆⠀⢀⣲⡖⣿⣿⣷⣶⢰⣶⡆⣶⡆⣶⣶⡆⣠⣶⣶⡶⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⢰⣷⡏⠀⠀⠋⠉⠀⢿⣿⠀⣾⡿⠀⢸⣿⡇⠀⠀⣿⣿⠋⠁⠀⣿⣷⢸⡟⠀⠀⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠘⣯⢷⣄⢠⣴⡦⠀⠘⣷⣻⣾⠂⠀⣿⣿⣧⣀⢸⣿⡇⠀⠀⢸⣿⡇⢿⣷⣄⣠⣶⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠁⠉⠉⠉⠀⢀⣀⣸⡿⠏⠀⠀⠀⠉⠉⠉⠀⠉⠁⠀⠀⠀⠉⠉⠁⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠘⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-                                                                                            
-                `);
+                if (!asciiShown) {
+                    asciiShown = true; 
+                    showAsciiArt(`
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⡠⣶⢶⠒⢢⡄⢲⣶⡆⠀⢀⣲⡖⣿⣿⣷⣶⢰⣶⡆⣶⡆⣶⣶⡆⣠⣶⣶⡶⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⢰⣷⡏⠀⠀⠋⠉⠀⢿⣿⠀⣾⡿⠀⢸⣿⡇⠀⠀⣿⣿⠋⠁⠀⣿⣷⢸⡟⠀⠀⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠘⣯⢷⣄⢠⣴⡦⠀⠘⣷⣻⣾⠂⠀⣿⣿⣧⣀⢸⣿⡇⠀⠀⢸⣿⡇⢿⣷⣄⣠⣶⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠁⠉⠉⠉⠀⢀⣀⣸⡿⠏⠀⠀⠀⠉⠉⠉⠀⠉⠁⠀⠀⠀⠉⠉⠁⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠘⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                    `);
+                }
             }
         }, 300);
     }
