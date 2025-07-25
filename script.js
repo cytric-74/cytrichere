@@ -221,6 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     showProjectsDir();
                     break;
                 case 'resume':
+                case 'cv':
                     window.open('cv.me.pdf', '_blank');
                     addToOutput(`<div class="response">Opening resume in new tab...</div>`);
                     break;
@@ -238,7 +239,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     showProject('feel_cv', `
 <b>feel_cv</b>
 A browser extension that fills up your relevant information but extracting relevant information 
-from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI.
+from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI. It can be reprogrammed for other APIs too (working on gemini and minstral)
 
 Type './link' to open the project repository.
 `);
