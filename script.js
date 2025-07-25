@@ -141,10 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let i = 0;
         const interval = setInterval(() => {
             if (i < bootSequence.length) {
-                if (!(bootSequence[i].includes("Welcome") && document.getElementById('output').textContent.includes("cytric"))) {
-                    i++;
-                    return;
-                }
                 addToOutput(`<div class="response">${bootSequence[i]}</div>`);
                 i++;
             } else {
