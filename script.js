@@ -237,10 +237,10 @@ document.addEventListener('DOMContentLoaded', function() {
             switch(target) {
                 case 'feel_cv':
                     showProject('feel_cv', `
-<b>feel_cv</b>
-A browser extension that fills up your relevant information but extracting relevant information 
+<span class = "bold title">feel_cv</span>
+<span class = "normal-text">A browser extension that fills up your relevant information but extracting relevant information 
 from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI. It can be reprogrammed for other APIs too (working on gemini and minstral)
-
+</span>
 Type './link' to open the project repository.
 `);
                     break;
