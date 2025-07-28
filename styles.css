@@ -32,18 +32,18 @@ body {
 
 #prompt {
     margin-right: 10px;
-    color: #ffffff;
+    color: #00ff8c;
 }
 
 #command-input {
     background: transparent;
     border: none;
-    color: #ff8c00;
+    color: #fff1c9;
     font-family: 'Ubuntu Mono', monospace;
     font-size: 16px;
     flex-grow: 1;
     outline: none;
-    caret-color: #ff8c00;
+    caret-color: #fff1c9;
 }
 
 .command {
@@ -56,7 +56,7 @@ body {
 }
 
 .dir {
-    color: #729fcf;
+    color: #0073ff;
 }
 
 .file {
@@ -90,7 +90,7 @@ body {
 }
 
 .normal-text {
-    color: #fff4d5;
+    color: #fff1c9;
 }
 
 /* Animation container */
