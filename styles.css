@@ -50,6 +50,10 @@ body {
     margin-bottom: 5px;
 }
 
+.message {
+    color: #c4c4c4;
+}
+
 .response {
     margin-bottom: 15px;
     white-space: pre-wrap;

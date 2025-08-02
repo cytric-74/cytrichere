@@ -259,7 +259,7 @@ of the audio while suggest you books/songs on the basis of your mood inorder to 
 <span class = "normal-text">Prediction for GTA6 sales based on the trailer hype and reaction from YouTube, X.com, 
 Instagram and other web articles.</span>
 
-<span class = "project-link">Type './link' to open the project repository.</span>
+<span class = "message">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'stock_market_analysis':
@@ -267,7 +267,7 @@ Instagram and other web articles.</span>
 <span classs = "bold-title">stock market analysis</span>
 <span class = "normal-text">Final year project, predicting stocks for various famous company using LSTM and rainfall model.</span>
 
-<span class = "project-link">Type './link' to open the project repository.</span>
+<span class = "message">Type './link' to open the project repository.</span>
 `);
                     break;
                 case '..':
@@ -320,7 +320,8 @@ Instagram and other web articles.</span>
 <span class="normal-text">Data Analyst | Computer Science Graduate</span>
 
 <span class="bold-titles">About Me:</span>
-<span class="normal-text">I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
+<span class="normal-text">
+I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
 With a strong foundation in software development, data analysis, and AI, I specialize in transforming complex datasets into meaningful insights and intuitive applications.
 
 I love designing(art, and other graphical content) also Love making and giving presentations.
@@ -328,12 +329,13 @@ I love designing(art, and other graphical content) also Love making and giving p
 Over the past few years, I've worked across projects involving deep learning, computer vision, sentiment analysis, and real-time data visualization.
 I’ve also collaborated on agricultural AI tools, audio emotion detection systems, and market prediction models using social media trends.
 
-I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India. </span>
+I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India. 
+</span>
 
 <span class="bold-titles">Education:</span>
     <span class="normal-text">B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
-            <span class = "project-link">CGPA: 9.2      YGPA : 9.0</span>
+            CGPA: 9.2      YGPA : 9.0
         </span>
 
 <span class="bold-titles">Research Interests:</span>
