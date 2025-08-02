@@ -333,7 +333,7 @@ I enjoy exploring intersections between technology, culture, and society—parti
 <span class="bold-titles">Education:</span>
     <span class="normal-text">B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
-            CGPA: 9.2      YGPA : 9.0
+            <span class = "project-link">CGPA: 9.2      YGPA : 9.0</span>
         </span>
 
 <span class="bold-titles">Research Interests:</span>
