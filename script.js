@@ -241,33 +241,33 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class = "normal-text">A browser extension that fills up your relevant information but extracting relevant information 
 from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI. It can be reprogrammed for other APIs too (working on gemini and minstral)
 </span>
-Type './link' to open the project repository.
+<span class= "project-link">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'meowtech_innovateathon':
                     showProject('meowtech_innovateathon', `
-<b>MeowTech INNOVATEathon</b>
-Built a project during Intel INNOVATEthon challenged with using intel oneAPI, that analyzes the audio real time predicting the emotion 
+<span class = "bold-title">MeowTech INNOVATEathon</span>
+<span class = "normal-text">Built a project during Intel INNOVATEthon challenged with using intel oneAPI, that analyzes the audio real time predicting the emotion 
 of the audio while suggest you books/songs on the basis of your mood inorder to revamp your positive mood or to elevate your negatives.
-
-Type './link' to open the project repository.
+</span>
+<span class = "project-link">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'gta6_sales_prediction':
                     showProject('gta6_sales_prediction', `
-<b>GTA6 sales prediction</b>
-Prediction for GTA6 sales based on the trailer hype and reaction from YouTube, X.com, 
-Instagram and other web articles.
+<span class = "bold-title">GTA6 sales prediction</span>
+<span class = "normal-text">Prediction for GTA6 sales based on the trailer hype and reaction from YouTube, X.com, 
+Instagram and other web articles.</span>
 
-Type './link' to open the project repository.
+<span class = "project-link">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'stock_market_analysis':
                     showProject('stock_market_analysis', `
-<b>stock market analysis</b>
-Final year project, predicting stocks for various famous company using LSTM and rainfall model.
+<span classs = "bold-title">stock market analysis</span>
+<span class = "normal-text">Final year project, predicting stocks for various famous company using LSTM and rainfall model.</span>
 
-Type './link' to open the project repository.
+<span class = "project-link">Type './link' to open the project repository.</span>
 `);
                     break;
                 case '..':
