@@ -383,15 +383,15 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
         const workText = `
 <span class="bold-titles">Professional Experience:</span>
 
-<b>Darwin Box</b>
-<span class"normal-text">
+<span class = "project-link">Darwin Box</span>
+<span class = "normal-text">
 - Improved efficiency by 4%
 - Automated reporting pipelines using Python, reducing manual effort
 - Implemented preventive maintenance strategies, resulting in 20% decrease in equipment downtime
 - Identified bottlenecks in workflow and suggested actionable insights
 </span>
 
-<b>Rdr.inc</b>
+<span class = "project-link">Rdr.inc</span>
 <span class="normal-text">
 - Analyzed complex datasets to identify trends and mitigate risks
 - Coordinated testing and validation, ensuring compliance with industry standards
