@@ -345,8 +345,8 @@ I enjoy exploring intersections between technology, culture, and society—parti
 - Machine Learning and AI applications
 </span>
 
-<span class="bold-titles>Hobbies:</span>
-<span class="normal-text">
+<span class = "bold-titles">Hobbies:</span>
+<span class = "normal-text">
 - Programming side projects
 - Learning new technologies
 - Open source contributions
@@ -354,7 +354,6 @@ I enjoy exploring intersections between technology, culture, and society—parti
 - Take some picture/video and edit them
 - Love watching f1/jetts (1 love engines)
 </span>
-
 `;
         addToOutput(`<div class="response">${aboutText}</div>`);
     }
