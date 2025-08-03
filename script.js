@@ -360,10 +360,10 @@ I enjoy exploring intersections between technology, culture, and society—parti
     
     function showSkills() {
         const skillsText = `
-<span class="bold-titles">Technical Skills:</span>
+<span class = "bold-titles">Technical Skills:</span>
 
 <b>Efficient with:</b>
-<span class="normal-text">
+<span class = "normal-text">
 Python  Java  MySQL  PowerBI  Tableau  REST  Git  Seaborn  Excel/Sheets  pySpark
 </span>
 
