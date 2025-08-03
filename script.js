@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    let asciiShown = false; // Add this globally
+    let asciiShown = false; 
 
     function showBootAnimation() {
         const bootSequence = [
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <span class = "normal-text">A browser extension that fills up your relevant information but extracting relevant information 
 from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI. It can be reprogrammed for other APIs too (working on gemini and minstral)
 </span>
-<span class= "project-link">Type './link' to open the project repository.</span>
+<span class= "message">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'meowtech_innovateathon':
@@ -250,7 +250,7 @@ from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model 
 <span class = "normal-text">Built a project during Intel INNOVATEthon challenged with using intel oneAPI, that analyzes the audio real time predicting the emotion 
 of the audio while suggest you books/songs on the basis of your mood inorder to revamp your positive mood or to elevate your negatives.
 </span>
-<span class = "project-link">Type './link' to open the project repository.</span>
+<span class = "message">Type './link' to open the project repository.</span>
 `);
                     break;
                 case 'gta6_sales_prediction':
@@ -385,7 +385,9 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
         const workText = `
 <span class="bold-titles">Professional Experience:</span>
 
-<span class = "project-link">Darwin Box</span>
+<a href="https://darwinbox.com/" target="_blank" rel="noopener noreferrer">
+  <span class="project-link">Darwin Box</span>
+</a>
 <span class = "normal-text">
 - Improved efficiency by 4%
 - Automated reporting pipelines using Python, reducing manual effort
@@ -393,7 +395,9 @@ CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
 - Identified bottlenecks in workflow and suggested actionable insights
 </span>
 
-<span class = "project-link">Rdr.inc</span>
+<a href="https://www.rdr.com/" target="_blank" rel="noopener noreferrer">
+  <span class="project-link">Rdr.inc</span>
+</a>
 <span class="normal-text">
 - Analyzed complex datasets to identify trends and mitigate risks
 - Coordinated testing and validation, ensuring compliance with industry standards
