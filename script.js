@@ -51,16 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function executeCommand(command) {
-        // Display the command with timestamp
+
         const time = new Date().toLocaleTimeString('en-US', { hour12: false });
         addToOutput(`<div class="command">[${time}] guest@terminal-roh:${currentDir} $ ${command}</div>`);
-        
-        // Parse command
+    
         const parts = command.split(' ');
         const cmd = parts[0].toLowerCase();
         const args = parts.slice(1);
         
-        // Execute appropriate command
         switch(cmd) {
             case 'ls':
                 handleLs();
