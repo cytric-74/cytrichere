@@ -3,35 +3,38 @@ body {
     color: #ff8c00;
     font-family: 'Ubuntu Mono', monospace;
     margin: 0;
-    padding: 20px;
+    padding: 2vw;
     height: 100vh;
     overflow: hidden;
+    font-size: calc(14px + 0.5vw);
 }
 
 #terminal {
     height: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #header {
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 #output {
     flex-grow: 1;
     overflow-y: auto;
-    padding-right: 10px;
+    padding-right: 1vw;
 }
 
 .input-line {
     display: flex;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
 }
 
 #prompt {
-    margin-right: 10px;
+    margin-right: 1vw;
     color: #00ff8c;
 }
 
@@ -40,14 +43,14 @@ body {
     border: none;
     color: #fff1c9;
     font-family: 'Ubuntu Mono', monospace;
-    font-size: 16px;
+    font-size: calc(14px + 0.5vw);
     flex-grow: 1;
     outline: none;
     caret-color: #fff1c9;
 }
 
 .command {
-    margin-bottom: 5px;
+    margin-bottom: 1vh;
 }
 
 .message {
@@ -55,7 +58,7 @@ body {
 }
 
 .response {
-    margin-bottom: 15px;
+    margin-bottom: 2vh;
     white-space: pre-wrap;
 }
 
@@ -78,7 +81,8 @@ body {
 .ascii-art {
     color: #fff1c9;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 2vh;
+    font-size: calc(10px + 0.5vw);
 }
 
 .project-link {
@@ -88,9 +92,9 @@ body {
 }
 
 .bold-title {
-   color: #ff8c00; 
-   font-weight: bold;
-   font-size: medium;
+    color: #ff8c00;
+    font-weight: bold;
+    font-size: calc(16px + 0.5vw);
 }
 
 .normal-text {
@@ -110,4 +114,70 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 100;
     pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 4vw;
+        font-size: calc(12px + 1vw);
+    }
+
+    #terminal {
+        padding: 2vw;
+    }
+
+    #command-input {
+        font-size: calc(12px + 1vw);
+    }
+
+    .ascii-art {
+        font-size: calc(8px + 0.5vw);
+        line-height: 1.1;
+    }
+
+    .bold-title {
+        font-size: calc(14px + 1vw);
+    }
+
+    #prompt {
+        font-size: calc(12px + 1vw);
+    }
+
+    #output {
+        padding-right: 2vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5vw;
+        font-size: calc(10px + 1.5vw);
+    }
+
+    #command-input {
+        font-size: calc(10px + 1.5vw);
+    }
+
+    .ascii-art {
+        font-size: calc(6px + 1vw);
+        line-height: 1.0;
+    }
+
+    .bold-title {
+        font-size: calc(12px + 1.5vw);
+    }
+
+    #prompt {
+        font-size: calc(10px + 1.5vw);
+    }
+
+    .input-line {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #prompt {
+        margin-bottom: 1vh;
+        margin-right: 0;
+    }
 }
