@@ -14,13 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Current directory
     let currentDir = '~';
     
-    // Focus input on page load and whenever clicked elsewhere
     commandInput.focus();
     document.addEventListener('click', () => commandInput.focus());
     
-    // Handle command input
     commandInput.addEventListener('keydown', function(e) {
-        // Clear any ongoing animation when typing
+
         if (e.key !== 'Enter' && e.key !== 'ArrowUp' && e.key !== 'ArrowDown') {
             clearAnimation();
         }
