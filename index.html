@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>roh here</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="terminal">
         <div id="header">
-            <div id="ascii-art"></div>
+            <pre id="ascii-art"></pre>
         </div>
         <div id="output"></div>
-        <div class="input-line">
-            <span id="prompt">roh@terminal$ :</span>
-            <input type="text" id="command-input" autocomplete="off">
+        <div id="input-line" class="input-line">
+            <span id="prompt">guest@terminal-roh:~$</span>
+            <input type="text" id="command-input" autofocus spellcheck="false">
         </div>
     </div>
-    <div id="animation-container"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
