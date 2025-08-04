@@ -173,10 +173,10 @@ document.addEventListener('DOMContentLoaded', function() {
 `;
         } else if (currentDir === '~/projects') {
             contents = `
-<span class="dir">feel_cv</span>                : A browser extension that fills up your relevant information
-<span class="dir">meowtech_innovateathon</span> : Built a project with intel oneAPI
-<span class="dir">gta6_sales_prediction</span>  : Prediction for GTA6 sales
-<span class="dir">stock_market_analysis</span>  : Final year project
+<span class="dir">feel_cv</span>                : <span class = "normal-text">A browser extension that fills up your relevant information</span>
+<span class="dir">meowtech_innovateathon</span> : <span class = "normal-text">Built a project with intel oneAPI</span>
+<span class="dir">gta6_sales_prediction</span>  : <span class = "normal-text">Prediction for GTA6 sales</span>
+<span class="dir">stock_market_analysis</span>  : <span class = "normal-text">Final year project on Stock market prediction using LSTM and rainforest</span>
 `;
         } else if (currentDir === '~/contact_me') {
             contents = `
