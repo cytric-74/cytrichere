@@ -1,117 +1,113 @@
 body {
-    background-color: #383838;
-    color: #ff8c00;
-    font-family: 'Ubuntu Mono', monospace;
-    margin: 0;
-    padding: 2vw;
-    height: 100vh;
-    overflow: hidden;
-    font-size: calc(14px + 0.5vw);
+  background-color: #383838;
+  color: #ff8c00;
+  font-family: 'Ubuntu Mono', monospace;
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #terminal {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 #header {
-    margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
 
 #output {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-right: 1vw;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .input-line {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1vh;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
 }
 
 #prompt {
-    margin-right: 1vw;
-    color: #00ff8c;
+  margin-right: 10px;
+  color: #00ff8c;
 }
 
 #command-input {
-    background: transparent;
-    border: none;
-    color: #fff1c9;
-    font-family: 'Ubuntu Mono', monospace;
-    font-size: calc(14px + 0.5vw);
-    flex-grow: 1;
-    outline: none;
-    caret-color: #fff1c9;
+  background: transparent;
+  border: none;
+  color: #fff1c9;
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+  flex-grow: 1;
+  outline: none;
+  caret-color: #fff1c9;
 }
 
 .command {
-    margin-bottom: 1vh;
+  margin-bottom: 5px;
 }
 
 .message {
-    color: #c4c4c4;
+  color: #c4c4c4;
 }
 
 .response {
-    margin-bottom: 2vh;
-    white-space: pre-wrap;
+  margin-bottom: 15px;
+  white-space: pre-wrap;
 }
 
 .dir {
-    color: #2983f0;
+  color: #2983f0;
 }
 
 .file {
-    color: #eeeeec;
+  color: #eeeeec;
 }
 
 .error {
-    color: #ff4747;
+  color: #ff4747;
 }
 
 .success {
-    color: #00ff8c;
+  color: #00ff8c;
 }
 
 .ascii-art {
-    color: #fff1c9;
-    line-height: 1.2;
-    margin-bottom: 2vh;
-    font-size: calc(10px + 0.5vw);
+  color: #fff1c9;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }
 
 .project-link {
-    color: #8c00ff;
-    text-decoration: underline;
-    cursor: pointer;
+  color: #8c00ff;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .bold-title {
-    color: #ff8c00;
-    font-weight: bold;
-    font-size: calc(16px + 0.5vw);
+  color: #ff8c00;
+  font-weight: bold;
+  font-size: medium;
 }
 
 .normal-text {
-    color: #fff1c9;
+  color: #fff1c9;
 }
 
 /* Animation container */
 #animation-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 100;
-    pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  pointer-events: none;
 }
