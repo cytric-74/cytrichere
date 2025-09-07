@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const commandInput = document.getElementById('command-input');
     const asciiArt = document.getElementById('ascii-art');
     
+    // Initialize matrix rain effect
+    initMatrixRain();
+    
     // Display initial ASCII art animation
     showBootAnimation();
     
