@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', () => commandInput.focus());
     
     commandInput.addEventListener('keydown', function(e) {
-
         if (e.key !== 'Enter' && e.key !== 'ArrowUp' && e.key !== 'ArrowDown') {
             clearAnimation();
         }
