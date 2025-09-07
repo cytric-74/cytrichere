@@ -51,6 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    function initMatrixRain() {
+        const matrixContainer = document.getElementById('matrixRain');
+        const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネゐハヒフヘホマミムメモヤユヨラリルレロワヲン';
+        
+        function createMatrixChar() {
+            const char = document.createElement('div');
+            char.className = 'matrix-char';
+            char.textContent = chars[Math.floor(Math.random() * chars.length)];
+            char.style.left = Math.random() * 100 + 'vw';
+            char.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            char.style.animationDelay = Math.random() * 2 + 's';
+            
+            matrixContainer.appendChild(char);
+            
+            setTimeout(() => {
+                char.remove();
+            }, 5000);
+        }
+        
+        setInterval(createMatrixChar, 150);
+    }
     
     function executeCommand(command) {
 
