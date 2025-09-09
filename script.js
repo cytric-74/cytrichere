@@ -436,26 +436,32 @@ I enjoy exploring intersections between technology, culture, and society—parti
     }
     
     function showSkills() {
-        const skillsText = `
-<span class = "bold-titles">Technical Skills:</span>
+    const skillsText = `
+<span class="bold-titles"> .☘︎ ݁˖ Technical Skills ⊹ ࣪ :</span>
 
-<b>Efficient with:</b>
-<span class = "normal-text">
-Python  Java  MySQL  PowerBI  Tableau  REST  Git  Seaborn  Excel/Sheets  pySpark
-</span>
+<b>╰┈➤ Efficient with:</b>
+<pre class="normal-text">
+┌────────┐ ┌──────┐ ┌───────┐ ┌─────────┐ ┌─────────┐ ┌──────┐ ┌─────┐ ┌─────────┐ ┌──────────────┐ ┌─────────┐
+| Python | | Java | | MySQL | | PowerBI | | Tableau | | REST | | Git | | Seaborn | | Excel/Sheets | | pySpark |
+└────────┘ └──────┘ └───────┘ └─────────┘ └─────────┘ └──────┘ └─────┘ └─────────┘ └──────────────┘ └─────────┘
+</pre>
 
-<b>Familiar with:</b>
-<span class="normal-text">
-JavaScript  TypeScript  React  Databricks  PostgreSQL  AWS (EC2, S3)  R  HuggingFace
-</span>
+<b>╰┈➤ Familiar with:</b>
+<pre class="normal-text">
+┌────────────┐ ┌────────────┐ ┌────────┐ ┌────────────┐ ┌────────────┐ ┌─────┐ ┌───────────┐ ┌───┐ ┌─────────────┐
+| JavaScript | | TypeScript | | React  | | Databricks | | PostgreSQL | | AWS | | (EC2, S3) | | R | | HuggingFace |
+└────────────┘ └────────────┘ └────────┘ └────────────┘ └────────────┘ └─────┘ └───────────┘ └───┘ └─────────────┘
+</pre>
 
-<b>Currently Learning:</b>
-<span class="normal-text">
-CFD  React (advanced)  Google Cloud Platform (BigQuery, Compute Engine)  ANOVA
-</span>
+<b>╰┈➤ Currently Learning:</b>
+<pre class="normal-text">
+┌─────┐ ┌────────────────────────────────┐  ┌───────────────┐ ┌───────┐
+| CFD | | GCP(Big Query, Compute Engine) |  | React(advance)| | ANOVA |
+└─────┘ └────────────────────────────────┘  └───────────────┘ └───────┘
+</pre>
 `;
-        addToOutput(`<div class="response">${skillsText}</div>`);
-    }
+    addToOutput(`<div class="response">${skillsText}</div>`);
+}
     
     function showWorkExp() {
         const workText = `
