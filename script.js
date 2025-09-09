@@ -202,8 +202,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 150);
     }
     
-    function showAsciiArt(art) {
-        addToOutput(`<div class="ascii-art">${art}</div>`);
+    function showEnhancedAsciiArt(art) {
+        const artDiv = document.createElement('div');
+        artDiv.className = 'ascii-art';
+        artDiv.textContent = art;
+        output.appendChild(artDiv);
+        output.scrollTop = output.scrollHeight;
     }
     
     function handleLs() {
