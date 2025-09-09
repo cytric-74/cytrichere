@@ -172,11 +172,11 @@ document.addEventListener('DOMContentLoaded', function() {
             "Booting Rohan's Portfolio...",
             "Loading modules.......",
             "Initializing terminal interface...",
-            "Mounting file systems...",
-            "Starting services...",
-            "Ready!",
+            "In the server!",
             "",
-            "Welcome to rohan's Terminal Portfolio",
+            "Welcome to Rohan's Terminal",
+            "cy-v v2.0", 
+            "",
             "Type 'help' for available commands",
             ""
         ];
@@ -184,24 +184,22 @@ document.addEventListener('DOMContentLoaded', function() {
         let i = 0;
         const interval = setInterval(() => {
             if (i < bootSequence.length) {
-                addToOutput(`<div class="response">${bootSequence[i]}</div>`);
+                const line = document.createElement('div');
+                line.className = 'response boot-line';
+                line.textContent = bootSequence[i];
+                output.appendChild(line);
+                output.scrollTop = output.scrollHeight;
                 i++;
             } else {
                 clearInterval(interval);
                 if (!asciiShown) {
                     asciiShown = true; 
-                    showAsciiArt(`
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⡠⣶⢶⠒⢢⡄⢲⣶⡆⠀⢀⣲⡖⣿⣿⣷⣶⢰⣶⡆⣶⡆⣶⣶⡆⣠⣶⣶⡶⢦⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⢰⣷⡏⠀⠀⠋⠉⠀⢿⣿⠀⣾⡿⠀⢸⣿⡇⠀⠀⣿⣿⠋⠁⠀⣿⣷⢸⡟⠀⠀⠚⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠘⣯⢷⣄⢠⣴⡦⠀⠘⣷⣻⣾⠂⠀⣿⣿⣧⣀⢸⣿⡇⠀⠀⢸⣿⡇⢿⣷⣄⣠⣶⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠁⠉⠉⠉⠀⢀⣀⣸⡿⠏⠀⠀⠀⠉⠉⠉⠀⠉⠁⠀⠀⠀⠉⠉⠁⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠘⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+                    showEnhancedAsciiArt(`
+                    >_  Terminal
                     `);
                 }
             }
-        }, 300);
+        }, 150);
     }
     
     function showAsciiArt(art) {
