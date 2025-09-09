@@ -468,7 +468,7 @@ I enjoy exploring intersections between technology, culture, and society—parti
 <span class="bold-titles">Professional Experience:</span>
 
 <a href="https://darwinbox.com/" target="_blank" rel="noopener noreferrer">
-  <span class="project-link">Darwin Box</span>
+  <span class="project-link">✧˖°.Darwin Box</span>
 </a>
 <span class = "normal-text">
 - Improved efficiency by 4%
@@ -478,7 +478,7 @@ I enjoy exploring intersections between technology, culture, and society—parti
 </span>
 
 <a href="https://www.rdr.com/" target="_blank" rel="noopener noreferrer">
-  <span class="project-link">Rdr.inc</span>
+  <span class="project-link">✧˖°. Rdr.inc</span>
 </a>
 <span class="normal-text">
 - Analyzed complex datasets to identify trends and mitigate risks
