@@ -391,10 +391,10 @@ Instagram and other web articles.</span>
     
     function showAboutMe() {
         const aboutText = `
-<span class="bold-title">Hi Im Rohan</span>
+<span class="bold-title"> Hi I'm Rohan</span>
 <span class="normal-text">Data Analyst | Computer Science Graduate</span>
 
-<span class="bold-titles">About Me:</span>
+<span class="bold-titles">About Me ₍^. .^₎⟆</span>
 <span class="normal-text">
 I'm a Computer Science and Engineering graduate passionate about building intelligent systems that entrigues me and in which I'm interested in. 
 With a strong foundation in software development, data analysis, and AI, I specialize in transforming complex datasets into meaningful insights and intuitive applications.
@@ -402,32 +402,34 @@ With a strong foundation in software development, data analysis, and AI, I speci
 I love designing(art, and other graphical content) also Love making and giving presentations.
 
 Over the past few years, I've worked across projects involving deep learning, computer vision, sentiment analysis, and real-time data visualization.
-I’ve also collaborated on agricultural AI tools, audio emotion detection systems, and market prediction models using social media trends.
+I've also collaborated on agricultural AI tools, audio emotion detection systems, and market prediction models using social media trends.
 
 I enjoy exploring intersections between technology, culture, and society—particularly in underrepresented regions like Northeast India. 
 </span>
 
-<span class="bold-titles">Education:</span>
+<span class="bold-titles">₊ ⊹ Education ⊹ ₊</span>
     <span class="normal-text">B.Tech in Computer Science and Engineering
         Siliguri Institute of Technology (2020-2024)
-            CGPA: 9.2      YGPA : 9.0
+            CGPA: 9.2      YGPA : 9.0    
         </span>
+    <span class="bold-titles">M.Tech in AI and ML</span>
+        <span class="normal-text"> NIT Sikkim</span>
 
-<span class="bold-titles">Research Interests:</span>
+<span class="bold-titles">⤷ ゛Research Interests ˎˊ˗</span>
 <span class="normal-text">
 - Computational Fluid Dynamics (CFD) and Particle-Based Simulations
 - Graph-Based Verification and Model Checking
 - Machine Learning and AI applications
 </span>
 
-<span class = "bold-titles">Hobbies:</span>
+<span class = "bold-titles">⚝ Hobbies:</span>
 <span class = "normal-text">
 - Programming side projects
 - Learning new technologies
 - Open source contributions
-- Dribble some baseketball
+- Dribble some basketball
 - Take some picture/video and edit them
-- Love watching f1/jetts (1 love engines)
+- Love watching and studying f1/jetts (interested in engines)
 </span>
 `;
         addToOutput(`<div class="response">${aboutText}</div>`);
