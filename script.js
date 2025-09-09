@@ -75,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function executeCommand(command) {
-
         const time = new Date().toLocaleTimeString('en-US', { hour12: false });
         addToOutput(`<div class="command">[${time}] guest@terminal-roh:${currentDir} $ ${command}</div>`);
     
@@ -92,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'clear':
             case 'cls':
-                showClearAnimation();
+                showEnhancedClearAnimation();
                 break;
             case 'help':
                 showHelp();
@@ -104,7 +103,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 handleLink();
                 break;
             default:
-                addToOutput(`<div class="error">Command not found: ${cmd}. Type 'help' for available commands.</div>`);
+                if (!handleEasterEggs(cmd)) {
+                    (`<div class="error">Command not found: ${cmd}. Type 'help' for available commands.</div>`);
+                }
+                break;
         }
     }
     
