@@ -509,17 +509,13 @@ I enjoy exploring intersections between technology, culture, and society—parti
     }
     
     function showContactDir() {
-        showAsciiArt(`
-⠀⠀⣶⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   ⢸⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     ⢸⣿⣿⡇⠀⠀⠀⠀
-⣠⣼⣿⣿⣧⣴⣦⣤⣤⡄⠀⠀⣤⣤⣤⣤⣤⣤⣠⣤⣶⣤⣄⠀⢠⣤⣦⣤⠀⢀⣠⣤⣶⣦⣤⣄⡀⠀⢀⣤⣤⣶⣶⣤⣤⡀⠀  ⢸⣿⣿⡇⠀⠀⠀⠀
-⠘⢿⣿⣿⡟⠛⠻⣿⣿⣷⠀⢸⣿⣿⡏⣿⣿⣿⡿⠟⢿⣿⣿⣧⢸⣿⣿⣿⢠⣿⣿⡿⠛⠻⣿⣿⣿⡴⠿⠿⢿⢛⠛⣿⣿⣿  ⢸⣿⣿⡇⠀⠀⠀⠀
-⠀⢸⣿⣿⡇⠀⠀⢻⣿⣿⡆⣿⣿⡿⠀⣿⣿⣿⡇⠀ ⣿⣿⣿⢸⣿⣿⣿⢽⣿⣿⡇⠀⠀⢉⣉⣉⣩⣴⣶⣿⣿⡿⣿⣿⣿⣿⠀ ⢸⣿⣿⡇⠀⠀⠀⠀
-⠀⢸⣿⣿⣷⣤⡄⠀⢿⣿⣿⣿⣿⠁⠀⣿⣿⣿⣷⣤⣾⣿⣿⡟⢸⣿⣿⣿⠸⣿⣿⣷⣤⣤⣾⣿⣿⢻⣿⣿⣯⣄⣤⣿⣿⣿⣦ ⣼⣿⣿⡇⢸⣿⣿⣿
-⠀⠈⠛⠿⠿⠟⢃⠀⢈⣿⣿⣿⠇⠀⠀⣿⣿⣿⡟⠻⠿⠟⠋⠀⠘⠛⠛⠛⠀⠈⠛⠻⠿⠿⠟⠛⠁⠈⠛⠿⣿⣿⣿⡛⠻⠿⠿⠛ ⠛⠛⠃⠘⠛⠛⠻
-⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⡿⠋⠀⠀⠀ ⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-`);
-        addToOutput(`<div class="response">Entered contact directory. Use 'ls' to view contact methods.</div>`);
+        const contactTxtdir = `
+┌────────┐  ┌──────────┐  ┌────────┐  ┌─────────┐  ┌───────────┐  ┌─────────┐
+| Github |  | Linkedin |  | Email  |  | Discord |  | Instagram |  | Twitter |   
+└────────┘  └──────────┘  └────────┘  └─────────┘  └───────────┘  └─────────┘
+        `;
+        addToOutput(`<div class="response"><pre class="normal-text">${contactTxtdir}</pre></div>`);
+        addToOutput(`<div class="normal-text">Entered contact directory. Use 'ls' to view contact methods.</div>`);
     }
     
     function showProject(projectName, description) {
