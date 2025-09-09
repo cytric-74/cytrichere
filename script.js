@@ -119,24 +119,43 @@ document.addEventListener('DOMContentLoaded', function() {
         output.innerHTML = '';
     }
     
-    function showClearAnimation() {
-        clearTerminal();
+    function showEnhancedClearAnimation() {
+        // kinda making an overlay (need to fix this)
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'loading-animation';
+        loadingDiv.innerHTML = `
+            <div class="loading-dots">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        `;
         
-        // ASCII art frames for animation
-        const frames = [
-            `   _____\n  /     \\\n  \\     /\n   -----`,
-            `   _____\n  /     \\\n  \\  .  /\n   -----`,
-            `   _____\n  /  .  \\\n  \\     /\n   -----`,
-            `   _____\n  /     \\\n  \\  '  /\n   -----`
-        ];
+        document.getElementById('terminal').appendChild(loadingDiv);
         
-        let frameIndex = 0;
-        addToOutput(`<div class="ascii-art">${frames[frameIndex]}</div>`);
-        
-        animationInterval = setInterval(() => {
-            frameIndex = (frameIndex + 1) % frames.length;
-            output.lastChild.innerHTML = frames[frameIndex];
-        }, 300);
+        setTimeout(() => {
+            loadingDiv.remove();
+            clearTerminal();
+            // gotta change this 
+            const frames = [
+                `   ╭─────╮\n   │ ░░░ │\n   │ ░░░ │\n   ╰─────╯`,
+                `   ╭─────╮\n   │ ▒▒▒ │\n   │ ▒▒▒ │\n   ╰─────╯`,
+                `   ╭─────╮\n   │ ███ │\n   │ ███ │\n   ╰─────╯`,
+                `   ╭─────╮\n   │ ░█░ │\n   │ ░█░ │\n   ╰─────╯`,
+                `   ╭─────╮\n   │ ░░░ │\n   │ ░░░ │\n   ╰─────╯`
+            ];
+            
+            let frameIndex = 0;
+            addToOutput(`<div class="ascii-art">${frames[frameIndex]}</div>`);
+            
+            animationInterval = setInterval(() => {
+                frameIndex = (frameIndex + 1) % frames.length;
+                if (output.lastChild && output.lastChild.className === 'ascii-art') {
+                    output.lastChild.innerHTML = frames[frameIndex];
+                }
+            }, 200);
+        }, 1500);
     }
     
     function clearAnimation() {
