@@ -215,20 +215,20 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (currentDir === '~') {
             contents = `
-<span class="dir">about_me</span>    <span class="dir">skills</span>    <span class="dir">work_exp</span>
-<span class="dir">projects</span>    <span class="dir">resume</span>    <span class="dir">contact_me</span>
+📁 <span class="dir">about_me</span>    📁 <span class="dir">skills</span>    📁 <span class="dir">work_exp</span>
+📁 <span class="dir">projects</span>    📄 <span class="dir">resume</span>    📁 <span class="dir">contact_me</span>
 `;
         } else if (currentDir === '~/projects') {
             contents = `
-<span class="dir">feel_cv</span>                : <span class = "normal-text">A browser extension that fills up your relevant information</span>
-<span class="dir">meowtech_innovateathon</span> : <span class = "normal-text">Built a project with intel oneAPI</span>
-<span class="dir">gta6_sales_prediction</span>  : <span class = "normal-text">Prediction for GTA6 sales</span>
-<span class="dir">stock_market_analysis</span>  : <span class = "normal-text">Final year project on Stock market prediction using LSTM and rainforest</span>
+⟡ <span class="dir">feel_cv</span>                : <span class = "normal-text">A browser extension that fills up your relevant information</span>
+⟡ <span class="dir">meowtech_innovateathon</span> : <span class = "normal-text">Built a project with intel oneAPI</span>
+⟡ <span class="dir">gta6_sales_prediction</span>  : <span class = "normal-text">Prediction for GTA6 sales</span>
+⟡ <span class="dir">stock_market_analysis</span>  : <span class = "normal-text">Final year project on Stock market prediction using LSTM and rainforest</span>
 `;
         } else if (currentDir === '~/contact_me') {
             contents = `
-<span class="dir">github</span>     <span class="dir">linkedin</span>    <span class="dir">mail</span>
-<span class="dir">instagram</span>  <span class="dir">twitter</span>     <span class="dir">discord</span>
+✮⋆˙ <span class="dir">github</span>     ᝰ.ᐟ <span class="dir">linkedin</span>    ⋆ 𐙚 ̊. <span class="dir">mail</span>
+⭑.ᐟ <span class="dir">instagram</span>  ⋆˙⟡ <span class="dir">twitter</span>     ─.✦ <span class="dir">discord</span>
 `;
         } else {
             contents = `<div class="error">No contents to display in this directory</div>`;
