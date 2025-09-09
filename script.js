@@ -237,6 +237,33 @@ document.addEventListener('DOMContentLoaded', function() {
         addToOutput(`<div class="response">${contents}</div>`);
     }
     
+    function handleLs() {
+        let contents = '';
+        
+        if (currentDir === '~') {
+            contents = `
+📁 <span class="dir">about_me</span>    📁 <span class="dir">skills</span>    📁 <span class="dir">work_exp</span>
+📁 <span class="dir">projects</span>    📄 <span class="dir">resume</span>    📁 <span class="dir">contact_me</span>
+`;
+        } else if (currentDir === '~/projects') {
+            contents = `
+⟡ <span class="dir">feel_cv</span>                : <span class = "normal-text">A browser extension that fills up your relevant information</span>
+⟡ <span class="dir">meowtech_innovateathon</span> : <span class = "normal-text">Built a project with intel oneAPI</span>
+⟡ <span class="dir">gta6_sales_prediction</span>  : <span class = "normal-text">Prediction for GTA6 sales</span>
+⟡ <span class="dir">stock_market_analysis</span>  : <span class = "normal-text">Final year project on Stock market prediction using LSTM and rainforest</span>
+`;
+        } else if (currentDir === '~/contact_me') {
+            contents = `
+✮⋆˙ <span class="dir">github</span>     ᝰ.ᐟ <span class="dir">linkedin</span>    ⋆ 𐙚 ̊. <span class="dir">mail</span>
+⭑.ᐟ <span class="dir">instagram</span>  ⋆˙⟡ <span class="dir">twitter</span>     ─.✦ <span class="dir">discord</span>
+`;
+        } else {
+            contents = `<div class="error">No contents to display in this directory</div>`;
+        }
+        
+        addToOutput(`<div class="response">${contents}</div>`);
+    }
+    
     function handleCd(args) {
         if (args.length === 0) {
             currentDir = '~';
@@ -259,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 case 'work':
                     showWorkExp();
                     break;
+                case 'project':
                 case 'projects':
                     currentDir = '~/projects';
                     showProjectsDir();
@@ -278,36 +306,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } else if (currentDir === '~/projects') {
             switch(target) {
+                case 'feel':
                 case 'feel_cv':
                     showProject('feel_cv', `
-<span class = "bold-title">feel_cv</span>
+<span class = "bold-title">⊹ ࣪ ˖ feel_cv ⊹ ࣪ ˖</span>
 <span class = "normal-text">A browser extension that fills up your relevant information but extracting relevant information 
 from your uploaded cv(.docx, .txt, .pdf) with the help of fine tunned LLM model i.e, openAI. It can be reprogrammed for other APIs too (working on gemini and minstral)
 </span>
 <span class= "message">Type './link' to open the project repository.</span>
 `);
                     break;
+                case 'meow':
                 case 'meowtech_innovateathon':
                     showProject('meowtech_innovateathon', `
-<span class = "bold-title">MeowTech INNOVATEathon</span>
+<span class = "bold-title"> 𓃠 MeowTech INNOVATEathon</span>
 <span class = "normal-text">Built a project during Intel INNOVATEthon challenged with using intel oneAPI, that analyzes the audio real time predicting the emotion 
 of the audio while suggest you books/songs on the basis of your mood inorder to revamp your positive mood or to elevate your negatives.
 </span>
 <span class = "message">Type './link' to open the project repository.</span>
 `);
                     break;
+                case 'gta6':
                 case 'gta6_sales_prediction':
                     showProject('gta6_sales_prediction', `
-<span class = "bold-title">GTA6 sales prediction</span>
+<span class = "bold-title">✧˚ ⋆｡˚ GTA6 sales prediction ✧˚ ⋆｡˚</span>
 <span class = "normal-text">Prediction for GTA6 sales based on the trailer hype and reaction from YouTube, X.com, 
 Instagram and other web articles.</span>
 
 <span class = "message">Type './link' to open the project repository.</span>
 `);
                     break;
+                case 'stock':
                 case 'stock_market_analysis':
                     showProject('stock_market_analysis', `
-<span classs = "bold-title">stock market analysis</span>
+<span class = "bold-title"⋆☀︎. stock market analysis</span>
 <span class = "normal-text">Final year project, predicting stocks for various famous company using LSTM and rainfall model.</span>
 
 <span class = "message">Type './link' to open the project repository.</span>
@@ -318,32 +350,32 @@ Instagram and other web articles.</span>
                     addToOutput(`<div class="response">Returned to home directory</div>`);
                     break;
                 default:
-                    addToOutput(`<div class="error">Project not found: ${target}</div>`);
+                    addToOutput(`<div class="error">Contact method not found: ${target}</div>`);
             }
         } else if (currentDir === '~/contact_me') {
             switch(target) {
                 case 'github':
                     window.open('https://github.com/cytric-74', '_blank');
-                    addToOutput(`<div class="response">Opening GitHub profile...</div>`);
+                    addToOutput(`<div class="success">Opening GitHub profile...</div>`);
                     break;
                 case 'linkedin':
                     window.open('https://linkedin.com/in/roh28j', '_blank');
-                    addToOutput(`<div class="response">Opening LinkedIn profile...</div>`);
+                    addToOutput(`<div class="success">Opening LinkedIn profile...</div>`);
                     break;
                 case 'mail':
                     window.open('mailto:workatrohh@gmail.com', '_blank');
-                    addToOutput(`<div class="response">Opening email client...</div>`);
+                    addToOutput(`<div class="success">Opening email client...</div>`);
                     break;
                 case 'instagram':
                     window.open('https://instagram.com/roh28j', '_blank');
-                    addToOutput(`<div class="response">Opening Instagram profile...</div>`);
+                    addToOutput(`<div class="success">Opening Instagram profile...</div>`);
                     break;
                 case 'twitter':
                     window.open('https://twitter.com/roh28j', '_blank');
-                    addToOutput(`<div class="response">Opening Twitter profile...</div>`);
+                    addToOutput(`<div class="success">Opening Twitter profile...</div>`);
                     break;
                 case 'discord':
-                    addToOutput(`<div class="response">Discord: cytrc</div>`);
+                    addToOutput(`<div class="normal-text">Discord: cytrc</div>`);
                     break;
                 case '..':
                     currentDir = '~';
